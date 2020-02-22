@@ -17,14 +17,26 @@
                     <view key="view" contentMode="scaleToFill" id="y3x-u1-U1e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zwp-Je-kYI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Zwp-Je-kYI" secondAttribute="bottom" id="7WF-n5-J96"/>
+                            <constraint firstItem="Zwp-Je-kYI" firstAttribute="trailing" secondItem="ZLp-AX-HaJ" secondAttribute="trailing" id="AZs-xK-L45"/>
+                            <constraint firstItem="Zwp-Je-kYI" firstAttribute="top" secondItem="y3x-u1-U1e" secondAttribute="top" id="Weu-BW-bCm"/>
+                            <constraint firstItem="Zwp-Je-kYI" firstAttribute="leading" secondItem="ZLp-AX-HaJ" secondAttribute="leading" id="h05-oV-cVG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZLp-AX-HaJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="BnF-s0-05T"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ua-bw-VEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="466"/>
+            <point key="canvasLocation" x="1837.5999999999999" y="465.51724137931041"/>
         </scene>
         <!--Music View Controller-->
         <scene sceneID="c5a-rm-xRd">
@@ -33,14 +45,26 @@
                     <view key="view" contentMode="scaleToFill" id="0Q1-f7-uyf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eRd-Z1-CTh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eRd-Z1-CTh" firstAttribute="leading" secondItem="YAU-YI-XLT" secondAttribute="leading" id="2KH-eu-MYB"/>
+                            <constraint firstItem="eRd-Z1-CTh" firstAttribute="trailing" secondItem="YAU-YI-XLT" secondAttribute="trailing" id="GFf-th-RtG"/>
+                            <constraint firstItem="eRd-Z1-CTh" firstAttribute="top" secondItem="0Q1-f7-uyf" secondAttribute="top" id="Ssa-5r-zIJ"/>
+                            <constraint firstAttribute="bottom" secondItem="eRd-Z1-CTh" secondAttribute="bottom" id="y8k-Hb-Ez5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YAU-YI-XLT"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="ZM8-ew-IkT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="07c-Fr-3Zp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="-199"/>
+            <point key="canvasLocation" x="1837.5999999999999" y="-199.25037481259372"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="J6P-uM-Lgz">

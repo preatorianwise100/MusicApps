@@ -25,6 +25,7 @@
 		573CFD67240192E30012EF52 /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CFD66240192E30012EF52 /* MusicViewModel.swift */; };
 		573CFD69240192F20012EF52 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CFD68240192F20012EF52 /* StoreViewModel.swift */; };
 		573CFD6B240193080012EF52 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CFD6A240193080012EF52 /* FavoriteViewModel.swift */; };
+		573CFD6E2401A59E0012EF52 /* MusicDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CFD6D2401A59E0012EF52 /* MusicDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		573CFD66240192E30012EF52 /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
 		573CFD68240192F20012EF52 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		573CFD6A240193080012EF52 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		573CFD6D2401A59E0012EF52 /* MusicDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 		573CFD522401908E0012EF52 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				573CFD6C2401A56D0012EF52 /* MusicDetails */,
 				573CFD5C240191A50012EF52 /* MusicViewController.swift */,
 				573CFD64240192BA0012EF52 /* TableViewCellMusic.swift */,
 			);
@@ -236,6 +239,14 @@
 				573CFD6A240193080012EF52 /* FavoriteViewModel.swift */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		573CFD6C2401A56D0012EF52 /* MusicDetails */ = {
+			isa = PBXGroup;
+			children = (
+				573CFD6D2401A59E0012EF52 /* MusicDetails.swift */,
+			);
+			path = MusicDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573CFD6E2401A59E0012EF52 /* MusicDetails.swift in Sources */,
 				573CFD5D240191A50012EF52 /* MusicViewController.swift in Sources */,
 				573CFD202401904C0012EF52 /* ViewController.swift in Sources */,
 				573CFD61240191C40012EF52 /* FavoritesViewController.swift in Sources */,

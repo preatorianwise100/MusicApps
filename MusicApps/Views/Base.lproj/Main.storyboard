@@ -84,6 +84,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="afC-5d-ji4" id="j8c-lN-9P6"/>
+                                    <outlet property="delegate" destination="afC-5d-ji4" id="r8l-5a-xeX"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -176,6 +180,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eDL-UO-s48" id="RbV-Ty-eDS"/>
+                                    <outlet property="delegate" destination="eDL-UO-s48" id="R29-9O-KTB"/>
+                                </connections>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="UKc-00-8Ed">
                                 <rect key="frame" x="0.0" y="20" width="375" height="56"/>
@@ -205,6 +213,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="ZM8-ew-IkT"/>
                     <connections>
+                        <outlet property="searchers" destination="UKc-00-8Ed" id="xto-xI-de2"/>
                         <outlet property="tableView" destination="eRd-Z1-CTh" id="MAh-8T-e0f"/>
                     </connections>
                 </viewController>

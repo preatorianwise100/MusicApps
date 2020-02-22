@@ -34,9 +34,13 @@ class  MusicViewModel {
             print("descargado")
             do
             {
+               
+//                let f = try JSONDecoder().decode([MusicModel].self, from: data)
+//                print(f)
                 let decoder = JSONDecoder()
                 let downloadedMusic = try decoder.decode(MusicModel.self, from: data)
-                
+                if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>]
+                {}
                 self.arrayOfList = downloadedMusic.results
                 print(self.arrayOfList)
                 

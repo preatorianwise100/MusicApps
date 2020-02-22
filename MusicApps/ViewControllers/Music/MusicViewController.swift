@@ -13,9 +13,13 @@ class MusicViewController: UIViewController,UITableViewDataSource ,UITableViewDe
     
     @IBOutlet weak var searchers: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+     var  viewModelMusic = MusicViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetup()
+        viewModelMusic.downloadMusicPopularAll()
+        closureSetUp()
         // Do any additional setup after loading the view, typically from a nib.
     }
     func tableViewSetup()  {
@@ -23,12 +27,29 @@ class MusicViewController: UIViewController,UITableViewDataSource ,UITableViewDe
         tableView.delegate = self
         tableView.tableFooterView = UIView()
     }
+    
+    func closureSetUp()  {
+        viewModelMusic.reloadList = { [weak self] ()  in
+            ///UI chnages in main tread
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+                // self?.activityIndicator.stopAnimating()
+            }
+        }
+        viewModelMusic.errorMessage = { [weak self] (message)  in
+            DispatchQueue.main.async {
+                print(message)
+                // self?.activityIndicator.stopAnimating()
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10 //viewModel.arrayOfList.count
+        return viewModelMusic.arrayOfList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

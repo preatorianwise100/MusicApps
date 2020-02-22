@@ -9,16 +9,67 @@
 import Foundation
 import UIKit
 
-class  MusicViewModel: UIViewController {
+class  MusicViewModel {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    final let urlTotal = URL(string: "https://itunes.apple.com/search?term=in+utero&mediaType=music&limit=20")
+    
+    var reloadList = {() -> () in }
+    var errorMessage = {(message : String) -> () in }
+    
+    var arrayOfList : [Result] = []{
+        
+        didSet{
+            reloadList()
+        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func downloadMusicPopularAll(){
+        
+        guard let downloadURL = urlTotal else { return }
+        URLSession.shared.dataTask(with: downloadURL) { data, urlResponse, error in
+            guard let data = data, error == nil, urlResponse != nil else {
+                print("algo fallo")
+                return
+            }
+            print("descargado")
+            do
+            {
+                let decoder = JSONDecoder()
+                let downloadedMusic = try decoder.decode(MusicModel.self, from: data)
+                
+                self.arrayOfList = downloadedMusic.results
+                print(self.arrayOfList)
+                
+            } catch {
+                print("ocurrio un error despues de descarga")
+            }
+            }.resume()
+        
+        
+    }
+    func downloadMusicPopularByName(Name:String){
+        
+        guard let downloadURL = urlTotal else { return }
+        URLSession.shared.dataTask(with: downloadURL) { data, urlResponse, error in
+            guard let data = data, error == nil, urlResponse != nil else {
+                print("algo fallo")
+                return
+            }
+            print("descargado")
+            do
+            {
+                let decoder = JSONDecoder()
+                let downloadedMovies = try decoder.decode(MusicModel.self, from: data)
+                
+                self.arrayOfList = downloadedMovies.results
+                print(self.arrayOfList)
+                
+            } catch {
+                print("ocurrio un error despues de descarga")
+            }
+            }.resume()
+        
+        
     }
     
     

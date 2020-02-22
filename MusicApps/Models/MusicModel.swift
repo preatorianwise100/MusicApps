@@ -20,10 +20,17 @@ struct Result: Codable {
     let kind: Kind
     let artistID, collectionID, trackID: Int
     let artistName: ArtistName
-    let collectionName, trackName, collectionCensoredName, trackCensoredName: String
-    let artistViewURL, collectionViewURL, trackViewURL: String
+    let collectionName : String
+    let trackName: String
+    let collectionCensoredName: String
+    let trackCensoredName: String
+    let artistViewURL: String
+    let collectionViewURL: String
+    let trackViewURL: String
     let previewURL: String
-    let artworkUrl30, artworkUrl60, artworkUrl100: String
+    let artworkUrl30: String
+    let artworkUrl60: String
+    let artworkUrl100: String
     let collectionPrice, trackPrice: Double
     let collectionHDPrice, trackHDPrice: Double?
     let releaseDate: Date
@@ -33,7 +40,9 @@ struct Result: Codable {
     let country: Country
     let currency: Currency
     let primaryGenreName: PrimaryGenreName
-    let contentAdvisoryRating, shortDescription, longDescription: String?
+    let contentAdvisoryRating: String
+    let shortDescription: String
+    let longDescription: String?
     let isStreamable: Bool?
     
     enum CodingKeys: String, CodingKey {

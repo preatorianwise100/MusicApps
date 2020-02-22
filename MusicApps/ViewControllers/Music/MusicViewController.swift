@@ -55,6 +55,25 @@ class MusicViewController: UIViewController,UITableViewDataSource ,UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableViewCellMusic else { return UITableViewCell() }
         
+        let listObj = viewModelMusic.arrayOfList[indexPath.row]
+        
+        cell.LblTrackName.text = listObj.trackName
+        cell.LblCollectionName.text = listObj.collectionName
+        cell.LblArtistName.text =  listObj.artistName
+        
+        var paths = listObj.artworkUrl100
+        if let imageURL = URL(string:paths!) {
+            print(imageURL)
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageURL)
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        cell.imagenView.image = image
+                    }
+                }
+            }
+        }
        
         return cell
     }

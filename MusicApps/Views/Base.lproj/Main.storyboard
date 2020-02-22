@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,9 +26,24 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="155" id="XCX-dk-eup" customClass="TableViewCellFav" customModule="MusicApps" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XCX-dk-eup" id="XoL-Nl-h8m">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XCX-dk-eup" id="XoL-Nl-h8m">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="154.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MvT-or-hhQ">
+                                                    <rect key="frame" x="15" y="11" width="136" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="130" id="Qbi-P1-TDs"/>
+                                                        <constraint firstAttribute="height" constant="128" id="o8d-xO-3KX"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MvT-or-hhQ" firstAttribute="top" secondItem="XoL-Nl-h8m" secondAttribute="topMargin" id="XCG-0A-h3c"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MvT-or-hhQ" secondAttribute="bottom" constant="5" id="Yzi-7W-cD6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MvT-or-hhQ" secondAttribute="trailing" constant="209" id="ptT-xu-MBC"/>
+                                                <constraint firstItem="MvT-or-hhQ" firstAttribute="leading" secondItem="XoL-Nl-h8m" secondAttribute="leadingMargin" id="uSk-ge-eWw"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -66,6 +82,21 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O3k-em-QUC" id="det-N4-9G5">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Cn-Xv-zTM">
+                                                    <rect key="frame" x="15" y="5" width="130" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="N8U-nZ-c5r"/>
+                                                        <constraint firstAttribute="width" constant="130" id="u2g-uG-Cuc"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7Cn-Xv-zTM" firstAttribute="leading" secondItem="det-N4-9G5" secondAttribute="leading" constant="15" id="Da7-MS-KBh"/>
+                                                <constraint firstAttribute="bottom" secondItem="7Cn-Xv-zTM" secondAttribute="bottom" constant="6.5" id="kp7-so-VyC"/>
+                                                <constraint firstAttribute="trailing" secondItem="7Cn-Xv-zTM" secondAttribute="trailing" constant="230" id="lyk-jY-gIP"/>
+                                                <constraint firstItem="7Cn-Xv-zTM" firstAttribute="top" secondItem="det-N4-9G5" secondAttribute="top" constant="5" id="ruE-5G-l5W"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

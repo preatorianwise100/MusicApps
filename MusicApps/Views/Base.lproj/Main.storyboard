@@ -36,12 +36,9 @@
                                                         <constraint firstAttribute="width" constant="136" id="RNh-vZ-B2e"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="trackName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKO-Jz-LRZ">
-                                                    <rect key="frame" x="166" y="20" width="194" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="Fmw-2i-XZm"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="collectionName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90p-MU-Fy9">
+                                                    <rect key="frame" x="166" y="65" width="194" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -51,9 +48,12 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="collectionName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90p-MU-Fy9">
-                                                    <rect key="frame" x="166" y="65" width="194" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="trackName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKO-Jz-LRZ">
+                                                    <rect key="frame" x="166" y="20" width="194" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Fmw-2i-XZm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -76,6 +76,12 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="MKO-Jz-LRZ" secondAttribute="trailing" constant="-1" id="zJG-mX-QTd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="LblArtistNames" destination="pcP-q0-l3K" id="Y7u-9N-7AW"/>
+                                            <outlet property="LblCollections" destination="90p-MU-Fy9" id="bwa-IW-8Pq"/>
+                                            <outlet property="LblTrack" destination="MKO-Jz-LRZ" id="40m-Xx-miD"/>
+                                            <outlet property="imageViews" destination="MvT-or-hhQ" id="SAp-I0-Wph"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -90,6 +96,9 @@
                         <viewLayoutGuide key="safeArea" id="ZLp-AX-HaJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="BnF-s0-05T"/>
+                    <connections>
+                        <outlet property="tableView" destination="Zwp-Je-kYI" id="Rk5-GF-Ps3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ua-bw-VEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,12 +123,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Cn-Xv-zTM">
-                                                    <rect key="frame" x="14" y="5" width="130" height="128"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="130" id="67t-pf-hw4"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="trackName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyB-UJ-Lvo">
                                                     <rect key="frame" x="153" y="11" width="207" height="21"/>
                                                     <constraints>
@@ -144,6 +147,12 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Cn-Xv-zTM">
+                                                    <rect key="frame" x="15" y="5" width="130" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="130" id="67t-pf-hw4"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="pyB-UJ-Lvo" firstAttribute="leading" secondItem="hAh-aI-ugw" secondAttribute="leading" id="336-rI-XaF"/>
@@ -162,6 +171,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="LblArtistName" destination="eTW-kA-JaV" id="wjn-PR-x2n"/>
+                                            <outlet property="LblCollectionName" destination="hAh-aI-ugw" id="HIB-EO-xXV"/>
+                                            <outlet property="LblTrackName" destination="pyB-UJ-Lvo" id="Mdl-qV-U70"/>
+                                            <outlet property="imageView" destination="7Cn-Xv-zTM" id="9Nj-QJ-hgm"/>
+                                            <outlet property="imagenView" destination="7Cn-Xv-zTM" id="JTF-B2-71i"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -176,6 +192,9 @@
                         <viewLayoutGuide key="safeArea" id="YAU-YI-XLT"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="ZM8-ew-IkT"/>
+                    <connections>
+                        <outlet property="tableView" destination="eRd-Z1-CTh" id="MAh-8T-e0f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="07c-Fr-3Zp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

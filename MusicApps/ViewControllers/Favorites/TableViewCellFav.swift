@@ -10,6 +10,12 @@ import UIKit
 
 class TableViewCellFav: UITableViewCell {
 
+    @IBOutlet weak var imageViews: UIImageView!
+    
+    @IBOutlet weak var LblCollections: UILabel!
+    
+    @IBOutlet weak var LblArtistNames: UILabel!
+    @IBOutlet weak var LblTrack: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

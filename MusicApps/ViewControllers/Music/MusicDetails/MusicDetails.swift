@@ -23,14 +23,27 @@ class MusicDetails: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        // Do any additional setup after loading the view, typically from a nib.
+        addNavagationButtonBack()
+        
     }
-    
+    func addNavagationButtonBack()
+    {
+        let backButton = UIButton(type: .custom)
+        backButton.setTitle("< Back", for: .normal)
+        backButton.setTitleColor(backButton.tintColor, for: .normal) 
+        backButton.addTarget(self, action: #selector(self.backAction(_:)), for: .touchUpInside)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backAction(_ sender: UIButton) {
+        let _ = self.dismiss(animated: true, completion: nil)
+    }
     func updateUI() {
         //self.TitleLabel.text = nameString
         self.LblTextDetails.text = decripString

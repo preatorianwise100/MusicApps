@@ -26,6 +26,7 @@
 		573CFD69240192F20012EF52 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CFD68240192F20012EF52 /* StoreViewModel.swift */; };
 		573CFD6B240193080012EF52 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CFD6A240193080012EF52 /* FavoriteViewModel.swift */; };
 		573CFD6E2401A59E0012EF52 /* MusicDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CFD6D2401A59E0012EF52 /* MusicDetails.swift */; };
+		573CFD7324030C6F0012EF52 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573CFD7224030C6F0012EF52 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		573CFD68240192F20012EF52 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		573CFD6A240193080012EF52 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		573CFD6D2401A59E0012EF52 /* MusicDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetails.swift; sourceTree = "<group>"; };
+		573CFD7224030C6F0012EF52 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 		573CFD522401908E0012EF52 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				573CFD7124030C490012EF52 /* WebViewMusic */,
 				573CFD6C2401A56D0012EF52 /* MusicDetails */,
 				573CFD5C240191A50012EF52 /* MusicViewController.swift */,
 				573CFD64240192BA0012EF52 /* TableViewCellMusic.swift */,
@@ -247,6 +250,14 @@
 				573CFD6D2401A59E0012EF52 /* MusicDetails.swift */,
 			);
 			path = MusicDetails;
+			sourceTree = "<group>";
+		};
+		573CFD7124030C490012EF52 /* WebViewMusic */ = {
+			isa = PBXGroup;
+			children = (
+				573CFD7224030C6F0012EF52 /* WebViewController.swift */,
+			);
+			path = WebViewMusic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +404,7 @@
 				573CFD5B240191500012EF52 /* StoreModel.swift in Sources */,
 				573CFD67240192E30012EF52 /* MusicViewModel.swift in Sources */,
 				573CFD5F240191B40012EF52 /* StoreViewController.swift in Sources */,
+				573CFD7324030C6F0012EF52 /* WebViewController.swift in Sources */,
 				573CFD6B240193080012EF52 /* FavoriteViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

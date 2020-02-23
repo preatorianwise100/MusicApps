@@ -13,7 +13,8 @@ class MusicViewController: UIViewController,UITableViewDataSource ,UITableViewDe
     
     @IBOutlet weak var searchers: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-     var  viewModelMusic = MusicViewModel()
+    var  viewModelMusic = MusicViewModel()
+    var filteredExercises = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,12 +81,26 @@ class MusicViewController: UIViewController,UITableViewDataSource ,UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("deberia abrir Details")
 
+//        let listObj = viewModelMusic.arrayOfList[indexPath.row]
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: "MusicDetails") as! MusicDetails
+//        controller.nameString = listObj.collectionCensoredName
+//        controller.decripString = listObj.artistName
+//        controller.imageString = listObj.artworkUrl100
+//
+//        self.present(controller, animated: true, completion: nil)
+//
+//
         let listObj = viewModelMusic.arrayOfList[indexPath.row]
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "MusicDetails") as! MusicDetails
-        controller.nameString = listObj.collectionCensoredName
-        controller.decripString = listObj.artistName
-        controller.imageString = listObj.artworkUrl100
-        self.present(controller, animated: true, completion: nil)
+       //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+       let myVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicDetails")  as! MusicDetails
+        myVC.nameString = listObj.collectionCensoredName
+        myVC.decripString = listObj.artistName
+        myVC.imageString = listObj.artworkUrl100
+        let navController = UINavigationController(rootViewController: myVC)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(image: UIImage(named: "back_arrow"), style: .plain, target: MusicDetails.self, action: nil)
+        self.navigationController?.present(navController, animated: true, completion: nil)
+       
+        
     }
 }

@@ -12,6 +12,9 @@ import UIKit
 class  MusicViewModel {
     
     final let urlTotal = URL(string: "https://itunes.apple.com/search?term=in+utero&mediaType=music&limit=20")
+    final let urlSearch = URL(string: "https://itunes.apple.com/search?term=")
+    final let urlMediaType = URL(string: "&mediaType=music&limit=20")
+    
     
     var reloadList = {() -> () in }
     var errorMessage = {(message : String) -> () in }
@@ -53,7 +56,9 @@ class  MusicViewModel {
     }
     func downloadMusicPopularByName(Name:String){
         
-        guard let downloadURL = urlTotal else { return }
+        let urlTotalSearch =  URL(string:"https://itunes.apple.com/search?term=" + Name  + "&mediaType=music&limit=20")
+        
+        guard let downloadURL = urlTotalSearch else { return }
         URLSession.shared.dataTask(with: downloadURL) { data, urlResponse, error in
             guard let data = data, error == nil, urlResponse != nil else {
                 print("algo fallo")

@@ -60,7 +60,7 @@ class MusicViewController: UIViewController,UITableViewDataSource ,UITableViewDe
         cell.LblTrackName.text = listObj.trackName
         cell.LblCollectionName.text = listObj.collectionName
         cell.LblArtistName.text =  listObj.artistName
-        
+  
         var paths = listObj.artworkUrl100
         if let imageURL = URL(string:paths!) {
             print(imageURL)
@@ -78,8 +78,14 @@ class MusicViewController: UIViewController,UITableViewDataSource ,UITableViewDe
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("deberia abrir VCDetailsPopular")
+        print("deberia abrir Details")
 
-        
+        let listObj = viewModelMusic.arrayOfList[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "MusicDetails") as! MusicDetails
+        controller.nameString = listObj.collectionCensoredName
+        controller.decripString = listObj.artistName
+        controller.imageString = listObj.artworkUrl100
+        self.present(controller, animated: true, completion: nil)
     }
 }

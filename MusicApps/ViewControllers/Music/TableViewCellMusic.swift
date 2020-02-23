@@ -11,7 +11,6 @@ import UIKit
 class TableViewCellMusic: UITableViewCell {
    
     @IBOutlet weak var LblTrackName: UILabel!
-    
     @IBOutlet weak var LblCollectionName: UILabel!
     @IBOutlet weak var imagenView: UIImageView!
     @IBOutlet weak var LblArtistName: UILabel!

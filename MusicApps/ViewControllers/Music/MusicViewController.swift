@@ -81,16 +81,6 @@ class MusicViewController: UIViewController,UITableViewDataSource ,UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("deberia abrir Details")
 
-//        let listObj = viewModelMusic.arrayOfList[indexPath.row]
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let controller = storyboard.instantiateViewController(withIdentifier: "MusicDetails") as! MusicDetails
-//        controller.nameString = listObj.collectionCensoredName
-//        controller.decripString = listObj.artistName
-//        controller.imageString = listObj.artworkUrl100
-//
-//        self.present(controller, animated: true, completion: nil)
-//
-//
         let listObj = viewModelMusic.arrayOfList[indexPath.row]
        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicDetails")  as! MusicDetails
@@ -102,5 +92,23 @@ class MusicViewController: UIViewController,UITableViewDataSource ,UITableViewDe
         self.navigationController?.present(navController, animated: true, completion: nil)
        
         
+    }
+    
+    func someMethodIWantToCall(cell: UITableViewCell) {
+        //        print("Inside of ViewController now...")
+        
+        // we're going to figure out which name we're clicking on
+        
+//        guard let indexPathTapped = tableView.indexPath(for: cell) else { return }
+//
+//        let contact = twoDimensionalArray[indexPathTapped.section].names[indexPathTapped.row]
+//        print(contact)
+//
+//        let hasFavorited = contact.hasFavorited
+//        twoDimensionalArray[indexPathTapped.section].names[indexPathTapped.row].hasFavorited = !hasFavorited
+//
+//        //        tableView.reloadRows(at: [indexPathTapped], with: .fade)
+//
+//        cell.accessoryView?.tintColor = hasFavorited ? UIColor.lightGray : .red
     }
 }
